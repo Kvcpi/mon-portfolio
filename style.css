@@ -149,20 +149,37 @@ a{
     color: var(--text-color);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column;
+        background-color: var(--base-color);
+        position: absolute;
+        top: 70px; /* Ajuste en fonction de la hauteur de ta navbar */
+        right: 10px;
+        width: 200px;
+        border: 1px solid var(--text-color);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text-color);
+    }
+}
+
+@media (min-width: 769px) {
     .navbar ul {
         display: flex;
         position: static;
         flex-direction: row;
-        background-color: transparent;
-        width: auto;
-        right: 0;
-        top: 0;
-        padding: 0;
-        margin: 0;
-        justify-content: flex-end;
-        align-items: center;
-        height: 100%;
     }
 
     .navbar .menu-toggle {
