@@ -15,17 +15,18 @@
 <body class="">
     <nav id="header" class="navbar">
         <button id="dark-switch">
-            <i class='bx bx-moon' ></i>
-            <i class='bx bx-sun' ></i>
+            <i class='bx bx-moon'></i>
+            <i class='bx bx-sun'></i>
         </button>
         <a href="#header" class="logo"><span class="kLetter">K</span>vcpi <span class="point">.</span></a>
+        <i class="bx bx-menu menu-toggle"></i>
         <ul>
             <li><a href="#about">A propos</a></li>
             <li><a href="#projects">Mes Projets</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+    
     <!--Section Accueil-->
     <section id="home" class="home">
         <div class="home-info">
@@ -204,6 +205,12 @@
     </footer>
 
     <div onclick="scrollToTop()" class="scroll-top"><i class='bx bxs-chevron-up'></i></div>
+    
+    <script>document.querySelector('.menu-toggle').addEventListener('click', () => {
+        document.querySelector('.navbar ul').classList.toggle('active');
+    });
+    </script>
+    
 
 </body>
 
