@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="darkmode.js" defer></script>
     <script type="text/javascript" src="scroll.js" defer></script>
+    <script type="text/javascript" src="hamburger.js" defer></script>
 </head>
 
 <body class="">
@@ -19,13 +20,19 @@
             <i class='bx bx-sun'></i>
         </button>
         <a href="#header" class="logo"><span class="kLetter">K</span>vcpi <span class="point">.</span></a>
-        <i class="bx bx-menu menu-toggle"></i>
+        <!-- Icône du menu hamburger -->
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul>
             <li><a href="#about">A propos</a></li>
             <li><a href="#projects">Mes Projets</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    
     
     <!--Section Accueil-->
     <section id="home" class="home">
@@ -206,10 +213,6 @@
 
     <div onclick="scrollToTop()" class="scroll-top"><i class='bx bxs-chevron-up'></i></div>
     
-    <script>document.querySelector('.menu-toggle').addEventListener('click', () => {
-        document.querySelector('.navbar ul').classList.toggle('active');
-    });
-    </script>
     
 
 </body>
